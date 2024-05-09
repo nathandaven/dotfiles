@@ -1,4 +1,5 @@
 # dotfiles
+This is not set up in any fancy way for proper git management and deploying... this is just a quick backup for now. at somepoint I'll do it properly
 
 ## alacritty
 <img alt="Screenshot 2024-05-08 at 8 53 36 PM" src="https://github.com/nathandaven/dotfiles/assets/25095231/2161da43-8ede-4c25-b884-2a7b88b84746">
