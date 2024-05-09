@@ -13,7 +13,7 @@ opacity = 0.9
 padding = { x = 0, y = 0 }
 dynamic_padding = true
 decorations_theme_variant = "Dark"
-# dimensions = { columns = 100, lines = 26 }
+dimensions = { columns = 110, lines = 30 }
 
 [font]
 offset = { x = 0, y = 2 }
