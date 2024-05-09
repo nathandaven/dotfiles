@@ -37,6 +37,10 @@ bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
 [colors.footer_bar]
 background = '#c1b090'
 
+# Search colors
+[colors.search]
+matches = { foreground = '#1c1917', background = '#a09174' }
+focused_match = { foreground = '#1c1917', background = '#c8b692' }
 
 # From https://github.com/fatih/dotfiles/blob/main/alacritty.toml
 

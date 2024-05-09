@@ -1,5 +1,10 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
+
+# prompt on bottom
+# tput cup "$(tput lines)"
+# alias clear="clear && tput cup '$(tput lines-1)'"
+
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -161,6 +166,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias cleanphoto="exiftool -mpf:all= -trailer:all= "
 
+alias spotify="apotify_player"
 
 # Created by `pipx` on 2023-12-29 03:25:06
 export PATH="$PATH:/Users/nathandaven/.local/bin"
@@ -169,3 +175,7 @@ export PATH="$PATH:/Users/nathandaven/.local/bin"
 #   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 #   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # 
+
+# color overrides
+ZSH_HIGHLIGHT_STYLES[comment]="fg=magenta"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#8c7f66"
