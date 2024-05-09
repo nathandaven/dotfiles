@@ -123,7 +123,6 @@
     "itemMargin": 1 // Margin between two items (default: 3)
   },
   "terminal.external.osxExec": "iTerm.app",
-  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.preferredLightColorTheme": "GitHub Light Default",
   "materialTheme.accent": "Breaking Bad",
   "editor.cursorSmoothCaretAnimation": "on",
