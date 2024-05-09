@@ -1,0 +1,151 @@
+{
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.lineHeight": 1.1,
+  "javascript.validate.enable": false,
+  "editor.formatOnSave": true,
+  "javascript.format.enable": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "git.autofetch": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "terminal.integrated.tabs.enabled": true,
+  "git.enableSmartCommit": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "docker.showStartPage": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "powermode.enabled": true,
+  "coloredRegions.namedColors": {
+    "red": "rgba(255, 0, 0, 0.15)",
+    "green": "rgba(0, 255, 0, 0.15)",
+    "blue": "rgba(0, 0, 255, 0.15)",
+    "yellow": "rgba(255, 255, 0, 0.15)",
+    "cyan": "rgba(0, 255, 255, 0.15)",
+    "purple": "rgba(255, 0, 255, 0.15)"
+  },
+  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+  "editor.wordWrap": "on",
+  "workbench.colorCustomizations": {
+    "[Material Theme Lighter High Contrast]": {
+      "activityBarBadge.background": "#388E3C",
+      "activityBar.activeBorder": "#388E3C",
+      "list.activeSelectionForeground": "#388E3C",
+      "list.inactiveSelectionForeground": "#388E3C",
+      "list.highlightForeground": "#388E3C",
+      "scrollbarSlider.activeBackground": "#388E3C50",
+      "editorSuggestWidget.highlightForeground": "#388E3C",
+      "textLink.foreground": "#388E3C",
+      "progressBar.background": "#388E3C",
+      "pickerGroup.foreground": "#388E3C",
+      "tab.activeBorder": "#388E3C",
+      "notificationLink.foreground": "#388E3C",
+      "editorWidget.resizeBorder": "#388E3C",
+      "editorWidget.border": "#388E3C",
+      "settings.modifiedItemIndicator": "#388E3C",
+      "settings.headerForeground": "#388E3C",
+      "panelTitle.activeBorder": "#388E3C",
+      "breadcrumb.activeSelectionForeground": "#388E3C",
+      "menu.selectionForeground": "#388E3C",
+      "menubar.selectionForeground": "#388E3C",
+      "editor.findMatchBorder": "#388E3C",
+      "selection.background": "#388E3C40",
+      "statusBarItem.remoteBackground": "#388E3C"
+    },
+    "[Material Theme Lighter]": {
+      "activityBarBadge.background": "#7CB342",
+      "activityBar.activeBorder": "#7CB342",
+      "list.activeSelectionForeground": "#7CB342",
+      "list.inactiveSelectionForeground": "#7CB342",
+      "list.highlightForeground": "#7CB342",
+      "scrollbarSlider.activeBackground": "#7CB34250",
+      "editorSuggestWidget.highlightForeground": "#7CB342",
+      "textLink.foreground": "#7CB342",
+      "progressBar.background": "#7CB342",
+      "pickerGroup.foreground": "#7CB342",
+      "tab.activeBorder": "#7CB342",
+      "notificationLink.foreground": "#7CB342",
+      "editorWidget.resizeBorder": "#7CB342",
+      "editorWidget.border": "#7CB342",
+      "settings.modifiedItemIndicator": "#7CB342",
+      "settings.headerForeground": "#7CB342",
+      "panelTitle.activeBorder": "#7CB342",
+      "breadcrumb.activeSelectionForeground": "#7CB342",
+      "menu.selectionForeground": "#7CB342",
+      "menubar.selectionForeground": "#7CB342",
+      "editor.findMatchBorder": "#7CB342",
+      "selection.background": "#7CB34240",
+      "statusBarItem.remoteBackground": "#7CB342"
+    }
+    // "statusBar.background": "#5f0000",
+    // "statusBar.noFolderBackground": "#5f0000",
+    // "statusBar.debuggingBackground": "#5f0000"
+  },
+  "customizeUI.activityBar": "bottom",
+  "customizeUI.activityBarHideSettings": true,
+  "customizeUI.moveStatusbar": true,
+  "customizeUI.titleBar": "inline",
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 7,
+      "y": 7
+    }
+  },
+  "window.titleBarStyle": "native",
+  "window.customTitleBarVisibility": "never",
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 12,
+    "fontSize": 10
+  },
+  // "apc.sidebar.titlebar": {
+  //   "height": 0,
+  //   "fontSize": 12
+  // },
+  "apc.header": {
+    "default": 30, // Applied with "window.density.editorTabHeight": "default"
+    "compact": 30, // Applied wtih "window.density.editorTabHeight": "compact"
+    "height": 30, // Applied when neither "default" nor "compact" is specified
+    "fontSize": 12
+  },
+  "apc.activityBar": {
+    "position": "top", // top: above sidebar, bottom: below sidebar (default: 'left' if unspecified)
+    "size": 25, // Height (when top/bottom) or width (in default position)
+    "itemSize": 0, // Size of items within the bar (default: size)
+    "itemMargin": 1 // Margin between two items (default: 3)
+  },
+  "terminal.external.osxExec": "iTerm.app",
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
+  "materialTheme.accent": "Breaking Bad",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "terminal.integrated.cursorBlinking": true,
+  "vim.statusBarColorControl": true,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.renderWhitespace": "all",
+  "workbench.sideBar.location": "right",
+  "cyber77.brightness": 0.75,
+  "telemetry.telemetryLevel": "off",
+  "powermode.shake.enabled": false,
+  "powermode.explosions.size": 10,
+  "powermode.explosions.duration": 200,
+  "editor.fontSize": 13,
+  "workbench.activityBar.location": "top",
+  "cmake.showOptionsMovedNotification": false,
+  "debug.javascript.autoAttachFilter": "smart",
+  "git.confirmSync": false,
+  "window.density.editorTabHeight": "compact",
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.enabled": false,
+  "powermode.combo.location": "statusbar",
+  "files.simpleDialog.enable": true
+}

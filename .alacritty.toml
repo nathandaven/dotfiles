@@ -1,6 +1,9 @@
 # flexoki, horizon-dark, meliora, tender, wombat
 import = [
-    "~/.config/alacritty/themes/themes/meliora.toml"
+    "~/.config/alacritty/themes/themes/meliora.toml",
+    "~/.config/alacritty/meliora.toml",
+    "~/meliora.toml",
+    "~/.alacritty.meliora.toml",
 ]
 
 [window]
