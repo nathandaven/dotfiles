@@ -1,0 +1,25 @@
+# flexoki, horizon-dark, meliora, tender, wombat
+import = [
+    "~/.config/alacritty/themes/themes/meliora.toml"
+]
+
+[window]
+decorations = "Full"
+blur = true
+opacity = 0.9
+padding = { x = 0, y = 0 }
+dynamic_padding = true
+decorations_theme_variant = "Dark"
+# dimensions = { columns = 100, lines = 26 }
+
+[font]
+offset = { x = 0, y = 2 }
+glyph_offset = { x = 0, y = 1 }
+size = 11
+normal = { family = "MesloLGS NF", style = "Regular" }
+bold = { family = "MesloLGS NF", style = "Bold" }
+italic = { family = "MesloLGS NF", style = "Italic" }
+bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
+
+[colors.footer_bar]
+background = '#c1b090'
