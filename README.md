@@ -1,8 +1,9 @@
 # dotfiles
-dotfiles
 
+## alacritty
 <img alt="Screenshot 2024-05-08 at 8 53 36 PM" src="https://github.com/nathandaven/dotfiles/assets/25095231/2161da43-8ede-4c25-b884-2a7b88b84746">
 
+## vscode
 <img alt="Screenshot 2024-05-08 at 8 51 47 PM" src="https://github.com/nathandaven/dotfiles/assets/25095231/974f8442-630f-497a-aa47-7cf6bcdd89b1">
 
 ## my firefox configuration:
