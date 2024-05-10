@@ -58,7 +58,7 @@ main() {
 
     echo ""
     for FILE in $SCRIPT_DIR/*; do
-        if [[ "$(basename $FILE)" != ".DS_Store" && "$(basename $FILE)" != *.md && "$(basename $FILE)" != *.sh && "$(basename $FILE)" != *.vscode && "$(basename $FILE)" != *.git ]]; then
+        if [[ "$(basename $FILE)" != ".DS_Store" && "$(basename $FILE)" != *.md && "$(basename $FILE)" != *.sh && "$(basename $FILE)" != *.vscode && "$(basename $FILE)" != *.git && "$(basename $FILE)" != configuration ]]; then
             backup "$FILE"
             symlink "$FILE"
         fi
