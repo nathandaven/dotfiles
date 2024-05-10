@@ -721,3 +721,15 @@ multiplier = 3
 [selection]
 save_to_clipboard = true
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+
+# new tab (wip
+[[keyboard.bindings]]
+chars = "\u0006-"
+key = ","
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006="
+key = "."
+mods = "Command"
