@@ -4,7 +4,8 @@ this is not very fancy.. but if this is useful feel free to use.
 Reccomended resources:
 - https://github.com/gpakosz/.tmux for .tmux configuration and management of plugins
 - https://ohmyz.sh/ for zsh management
-- https://github.com/fatih/dotfiles/blob/main/alacritty.toml amazing resource for convenient mac keybindings in alacritty & tmux
+- https://github.com/fatih/dotfiles/blob/main/alacritty.toml amazing resource for convenient mac keybindings in alacritty
+- https://github.com/fatih/dotfiles/blob/main/tmuxconf for the corresponding tmux configuration for alacritty keybinds
 
 ## installation
 
