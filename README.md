@@ -1,9 +1,17 @@
 # dotfiles
 this is not very fancy.. but if this is useful feel free to use.
 
-Reccomended resources:
+#### Required installs:
+- https://ohmyz.sh/ for zsh plugins
+- https://github.com/romkatv/powerlevel10k cause everyone else is using it...
 - https://github.com/gpakosz/.tmux for .tmux configuration and management of plugins
-- https://ohmyz.sh/ for zsh management
+- https://github.com/alacritty/alacritty for the terminal
+- https://github.com/nvm-sh/nvm nvm for node versioning
+- https://github.com/lukechilds/zsh-nvm nvm plugin
+- https://github.com/alecthomas/chroma for syntax highlighting
+- https://github.com/mroth/evalcache plugin for loading times
+
+#### Great resources:
 - https://github.com/fatih/dotfiles/blob/main/alacritty.toml amazing resource for convenient mac keybindings in alacritty
 - https://github.com/fatih/dotfiles/blob/main/tmuxconf for the corresponding tmux configuration for alacritty keybinds
 
