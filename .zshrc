@@ -94,7 +94,7 @@ export ZSH_COLORIZE_STYLE="rrt"
 alias cat="ccat"
 
 # Tmux
-export ZSH_TMUX_AUTOSTART=true
+# export ZSH_TMUX_AUTOSTART=true
 export ZSH_TMUX_UNICODE=true
 
 plugins=(

@@ -8,6 +8,10 @@ import = [
 
 live_config_reload = true
 
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "tmux new-session -A -D -s main"]
+
 [bell]
 animation = "EaseOutExpo"
 duration = 0
