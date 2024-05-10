@@ -146,5 +146,8 @@
   "security.workspace.trust.banner": "never",
   "security.workspace.trust.enabled": false,
   "powermode.combo.location": "statusbar",
-  "files.simpleDialog.enable": true
+  "files.simpleDialog.enable": true,
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }
