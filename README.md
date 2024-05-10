@@ -4,6 +4,7 @@ this is not very fancy.. but if this is useful feel free to use.
 #### Required installs:
 - https://ohmyz.sh/ for zsh plugins
 - https://github.com/romkatv/powerlevel10k cause everyone else is using it...
+- https://github.com/tmux/tmux/wiki for terminal multiplexer
 - https://github.com/gpakosz/.tmux for .tmux configuration and management of plugins
 - https://github.com/alacritty/alacritty for the terminal
 - https://github.com/nvm-sh/nvm nvm for node versioning
