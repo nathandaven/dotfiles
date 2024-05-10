@@ -1,9 +1,12 @@
 # flexoki, horizon-dark, meliora, tender, wombat
+
+# import local toml config if exists
 import = [
     "~/.config/alacritty/themes/themes/meliora.toml",
     "~/.config/alacritty/meliora.toml",
     "~/meliora.toml",
     "~/.alacritty.meliora.toml",
+    "$HOME/.alacritty.toml.local"
 ]
 
 live_config_reload = true
@@ -24,7 +27,7 @@ unfocused_hollow = false
 decorations = "Full"
 blur = true
 opacity = 0.9
-padding = { x = 8, y = 0 }
+padding = { x = 1, y = 6 }
 dynamic_padding = false
 decorations_theme_variant = "Dark"
 dimensions = { columns = 110, lines = 26 }
@@ -37,6 +40,10 @@ normal = { family = "MesloLGS NF", style = "Regular" }
 bold = { family = "MesloLGS NF", style = "Bold" }
 italic = { family = "MesloLGS NF", style = "Italic" }
 bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
+
+[colors]
+draw_bold_text_with_bright_colors = true
+selection = { text = "#1c1917", background = "#d6d0cd" }
 
 [colors.footer_bar]
 background = '#c1b090'

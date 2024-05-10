@@ -85,9 +85,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Plugin config options
 # NVM
-export NVM_LAZY_LOAD=true
+# export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
 export NVM_HOMEBREW=/opt/homebrew/opt/nvm
+# export NVM_LAZY=1
+# zstyle ':omz:plugins:nvm' lazy yes
 
 # Colorize
 export ZSH_COLORIZE_STYLE="rrt"
@@ -96,6 +98,11 @@ alias cat="ccat"
 # Tmux
 # export ZSH_TMUX_AUTOSTART=true
 export ZSH_TMUX_UNICODE=true
+
+# Gcloud
+# Use a python you have installed in a special location
+export CLOUDSDK_PYTHON=/usr/local/Cellar/python@3.9/3.9.19/libexec/bin/python3
+
 
 plugins=(
   evalcache
@@ -116,8 +123,12 @@ plugins=(
   copypath
   common-aliases
   colorize
+  gcloud
+  helm
+  docker
+  kubectl
 )
-
+# compctl -g '~/.itermocil/*(:t:r)' itermocil
 source $ZSH/oh-my-zsh.sh
 
 # colorls gem
@@ -178,4 +189,10 @@ export PATH="$PATH:/Users/nathandaven/.local/bin"
 
 # color overrides
 ZSH_HIGHLIGHT_STYLES[comment]="fg=magenta"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#8c7f66"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#897d66"
+# fg=white,bold,bg=#ff00ff,bold 756b57
+
+# import local zshrc
+if [[ -r "$HOME/.zshrc.local" ]]; then
+  source "$HOME/.zshrc.local"
+fi
