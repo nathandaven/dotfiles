@@ -38,8 +38,8 @@ wezterm.on(
 
         -- shorten the path by using ~ as $HOME.
         local home_dir = os.getenv('HOME')
-        -- return string.gsub(cwd_str, home_dir, '~')
-        return string.gsub(cwd_str, home_dir, '$HOME')
+        return string.gsub(cwd_str, home_dir, '~')
+        -- return string.gsub(cwd_str, home_dir, '$HOME')
     end
 )
 
