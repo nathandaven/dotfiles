@@ -177,7 +177,11 @@ source $ZSH/oh-my-zsh.sh
 
 alias cleanphoto="exiftool -mpf:all= -trailer:all= "
 
-alias spotify="apotify_player"
+alias spotify="spotify_player"
+alias clock="tty-clock  -s -c -t"
+alias pipes="pipes.sh"
+alias bonsai="cbonsai"
+alias matrix="cmatrix"
 
 # Created by `pipx` on 2023-12-29 03:25:06
 export PATH="$PATH:/Users/nathandaven/.local/bin"

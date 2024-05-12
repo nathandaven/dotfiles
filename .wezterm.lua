@@ -7,12 +7,16 @@ wezterm.on('update-status', function(window, pane)
     if window:get_dimensions().is_full_screen then
         overrides.use_fancy_tab_bar = false
         overrides.window_decorations = "NONE"
+        overrides.hide_tab_bar_if_only_one_tab = true
+        overrides.enable_scroll_bar = false
         -- overrides.tab_bar_at_bottom = true
         -- overrides.show_tabs_in_tab_bar = false
     else
         overrides.window_decorations = "INTEGRATED_BUTTONS | RESIZE | MACOS_FORCE_ENABLE_SHADOW"
         overrides.use_fancy_tab_bar = true
         overrides.tab_bar_at_bottom = false
+        overrides.hide_tab_bar_if_only_one_tab = false
+        overrides.enable_scroll_bar = true
         -- overrides.show_tabs_in_tab_bar = true
     end
     window:set_config_overrides(overrides)
@@ -69,12 +73,24 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Mashup Colors (terminal.sexy)'
-config.color_scheme = 'Papercolor Dark (Gogh)'
-config.color_scheme = 'Molokai'
-config.color_scheme = 'Monokai (terminal.sexy)'
+-- config.color_scheme_dirs = {
+--     '/Users/nathandaven/Developer/dotfiles/configuration',
+--     '/Users/nathandaven/.config/wezterm/colors',
+-- }
+config.color_scheme = 'zenburn (terminal.sexy)'
+-- config.color_scheme = 'Mashup Colors (terminal.sexy)'
+-- config.color_scheme = 'Papercolor Dark (Gogh)'
+-- config.color_scheme = 'Molokai'
+-- config.color_scheme = 'Monokai (terminal.sexy)'
 -- config.color_scheme = 'Monokai (base16)'
-
+-- config.color_scheme = 'Adventure'
+-- config.color_scheme = 'Afterglow'
+-- config.color_scheme = 'Apple System Colors'
+-- config.color_scheme = 'arcoiris'
+config.color_scheme = 'Arthur'
+-- config.color_scheme = 'astromouse (terminal.sexy)'
+-- config.color_scheme = 'Vacuous 2 (terminal.sexy)'
+-- config.color_scheme = 'VisiBone (terminal.sexy)'
 -- more
 config.font = wezterm.font_with_fallback({
     "Fira Code",
@@ -89,8 +105,8 @@ config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = false
 config.tab_bar_at_bottom = false
 config.window_decorations = "INTEGRATED_BUTTONS | RESIZE | MACOS_FORCE_ENABLE_SHADOW"
-config.window_background_opacity = 0.8
-config.macos_window_background_blur = 75
+config.window_background_opacity = 0.92
+config.macos_window_background_blur = 40
 config.tab_max_width = 9999
 config.native_macos_fullscreen_mode = true
 config.hide_mouse_cursor_when_typing = false
