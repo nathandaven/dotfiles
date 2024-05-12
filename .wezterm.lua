@@ -53,7 +53,7 @@ config.color_scheme = 'Mashup Colors (terminal.sexy)'
 config.color_scheme = 'Papercolor Dark (Gogh)'
 config.color_scheme = 'Molokai'
 config.color_scheme = 'Monokai (terminal.sexy)'
-config.color_scheme = 'Monokai (base16)'
+-- config.color_scheme = 'Monokai (base16)'
 
 -- more
 config.font = wezterm.font_with_fallback({
@@ -69,13 +69,15 @@ config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = false
 config.tab_bar_at_bottom = false
 config.window_decorations = "INTEGRATED_BUTTONS | RESIZE | MACOS_FORCE_ENABLE_SHADOW"
-config.window_background_opacity = 0.92
-config.macos_window_background_blur = 80
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 75
 config.tab_max_width = 9999
+config.native_macos_fullscreen_mode = true
+config.hide_mouse_cursor_when_typing = false
 config.window_padding = {
     -- left = 10,
     -- right = 10,
-    top = 30,
+    -- top = 30,
     -- bottom = 0,
 }
 config.enable_scroll_bar = true
@@ -87,7 +89,9 @@ config.window_frame = {
     -- active_titlebar_bg = '#333333',
     -- inactive_titlebar_bg = '#333333',
 }
-
+config.initial_rows = 25
+config.initial_cols = 90
+config.window_close_confirmation = 'NeverPrompt'
 
 -- Custom keybinds
 local act = wezterm.action
@@ -100,6 +104,49 @@ config.keys = {
     { key = 'w',          mods = 'CMD',         action = wezterm.action.CloseCurrentPane { confirm = false }, },
     { key = "LeftArrow",  mods = "OPT",         action = wezterm.action { SendString = "\x1bb" } },
     { key = "RightArrow", mods = "OPT",         action = wezterm.action { SendString = "\x1bf" } },
+}
+
+-- via https://akos.ma/blog/adopting-wezterm/
+config.hyperlink_rules = {
+    -- Matches: a URL in parens: (URL)
+    {
+        regex = '\\((\\w+://\\S+)\\)',
+        format = '$1',
+        highlight = 1,
+    },
+    -- Matches: a URL in brackets: [URL]
+    {
+        regex = '\\[(\\w+://\\S+)\\]',
+        format = '$1',
+        highlight = 1,
+    },
+    -- Matches: a URL in curly braces: {URL}
+    {
+        regex = '\\{(\\w+://\\S+)\\}',
+        format = '$1',
+        highlight = 1,
+    },
+    -- Matches: a URL in angle brackets: <URL>
+    {
+        regex = '<(\\w+://\\S+)>',
+        format = '$1',
+        highlight = 1,
+    },
+    -- Then handle URLs not wrapped in brackets
+    {
+        -- Before
+        --regex = '\\b\\w+://\\S+[)/a-zA-Z0-9-]+',
+        --format = '$0',
+        -- After
+        regex = '[^(]\\b(\\w+://\\S+[)/a-zA-Z0-9-]+)',
+        format = '$1',
+        highlight = 1,
+    },
+    -- implicit mailto link
+    {
+        regex = '\\b\\w+@[\\w-]+(\\.[\\w-]+)+\\b',
+        format = 'mailto:$0',
+    },
 }
 
 -- and finally, return the configuration to wezterm
