@@ -149,5 +149,8 @@
   "files.simpleDialog.enable": true,
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
   }
 }
