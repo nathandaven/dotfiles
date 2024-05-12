@@ -1,11 +1,31 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 
+
+wezterm.on('update-status', function(window, pane)
+    local overrides = window:get_config_overrides() or {}
+    if window:get_dimensions().is_full_screen then
+        overrides.use_fancy_tab_bar = false
+        overrides.window_decorations = "NONE"
+        -- overrides.tab_bar_at_bottom = true
+        -- overrides.show_tabs_in_tab_bar = false
+    else
+        overrides.window_decorations = "INTEGRATED_BUTTONS | RESIZE | MACOS_FORCE_ENABLE_SHADOW"
+        overrides.use_fancy_tab_bar = true
+        overrides.tab_bar_at_bottom = false
+        -- overrides.show_tabs_in_tab_bar = true
+    end
+    window:set_config_overrides(overrides)
+end)
+
 -- from https://github.com/jdhao/dotfiles/blob/master/.config/wezterm/wezterm.lua
 wezterm.on(
     "update-right-status",
     function(window)
         local date = wezterm.strftime("%Y-%m-%d %H:%M:%S    ")
+        if window:get_dimensions().is_full_screen then
+            date = wezterm.strftime("%Y-%m-%d %H:%M:%S")
+        end
         window:set_right_status(
             wezterm.format(
                 {
@@ -21,27 +41,27 @@ wezterm.on(
 -- https://wezfurlong.org/wezterm/config/lua/window-events/format-tab-title.html#format-tab-title
 -- https://wezfurlong.org/wezterm/config/lua/PaneInformation.html
 -- https://wezfurlong.org/wezterm/config/lua/pane/get_current_working_dir.html
-wezterm.on(
-    'format-tab-title',
-    function(tab, tabs, panes, config, hover, max_width)
-        local active_pane = tab.active_pane
-
-        -- cwd is a URL object with file:// as beginning.
-        local cwd = active_pane.current_working_dir
-        if cwd == nil then
-            return
-        end
-
-
-        -- get cwd in string format, https://wezfurlong.org/wezterm/config/lua/wezterm.url/Url.html
-        local cwd_str = cwd.file_path
-
-        -- shorten the path by using ~ as $HOME.
-        local home_dir = os.getenv('HOME')
-        return string.gsub(cwd_str, home_dir, '~')
-        -- return string.gsub(cwd_str, home_dir, '$HOME')
-    end
-)
+-- wezterm.on(
+--     'format-tab-title',
+--     function(tab, tabs, panes, config, hover, max_width)
+--         local active_pane = tab.active_pane
+--
+--         -- cwd is a URL object with file:// as beginning.
+--         local cwd = active_pane.current_working_dir
+--         if cwd == nil then
+--             return
+--         end
+--
+--
+--         -- get cwd in string format, https://wezfurlong.org/wezterm/config/lua/wezterm.url/Url.html
+--         local cwd_str = cwd.file_path
+--
+--         -- shorten the path by using ~ as $HOME.
+--         local home_dir = os.getenv('HOME')
+--         return string.gsub(cwd_str, home_dir, '~')
+--         -- return string.gsub(cwd_str, home_dir, '$HOME')
+--     end
+-- )
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -74,6 +94,7 @@ config.macos_window_background_blur = 75
 config.tab_max_width = 9999
 config.native_macos_fullscreen_mode = true
 config.hide_mouse_cursor_when_typing = false
+config.show_tabs_in_tab_bar = true
 config.window_padding = {
     -- left = 10,
     -- right = 10,
