@@ -8,7 +8,7 @@ wezterm.on('update-status', function(window, pane)
         overrides.use_fancy_tab_bar = false
         overrides.window_decorations = "NONE"
         overrides.hide_tab_bar_if_only_one_tab = true
-        overrides.enable_scroll_bar = false
+        -- overrides.enable_scroll_bar = false
         -- overrides.tab_bar_at_bottom = true
         -- overrides.show_tabs_in_tab_bar = false
     else
@@ -16,8 +16,14 @@ wezterm.on('update-status', function(window, pane)
         overrides.use_fancy_tab_bar = true
         overrides.tab_bar_at_bottom = false
         overrides.hide_tab_bar_if_only_one_tab = false
-        overrides.enable_scroll_bar = true
+        -- overrides.enable_scroll_bar = true
         -- overrides.show_tabs_in_tab_bar = true
+    end
+
+    if pane:is_alt_screen_active() then
+        overrides.colors.scrollbar_thumb = "transparent"
+    else
+        overrides.colors.scrollbar_thumb = nil
     end
     window:set_config_overrides(overrides)
 end)
@@ -66,6 +72,7 @@ wezterm.on(
 --         -- return string.gsub(cwd_str, home_dir, '$HOME')
 --     end
 -- )
+
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
