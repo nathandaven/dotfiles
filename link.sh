@@ -41,7 +41,10 @@ parse() {
         "$(basename $FILE)" != *.vscode &&
         "$(basename $FILE)" != *.git &&
         "$(basename $FILE)" != configuration &&
-        "$(basename $FILE)" != .config ]]; then
+        "$(basename $FILE)" != .config &&
+        "$(basename $FILE)" != .env &&
+        "$(basename $FILE)" != .gitconfig &&
+        "$(basename $FILE)" != .gitignore ]]; then
             backup "$FILE"
             symlink "$FILE"
         fi

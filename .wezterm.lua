@@ -32,15 +32,23 @@ wezterm.on('update-status', function(window, pane)
             bottom = 0,
         }
         overrides.enable_scroll_bar = false
+        overrides.window_background_opacity = 1.0
         -- overrides.tab_bar_at_bottom = true
         -- overrides.show_tabs_in_tab_bar = false
     else
-        overrides.window_decorations = "INTEGRATED_BUTTONS | RESIZE | MACOS_FORCE_ENABLE_SHADOW"
-        overrides.use_fancy_tab_bar = true
-        overrides.tab_bar_at_bottom = false
-        overrides.hide_tab_bar_if_only_one_tab = false
+        -- overrides.window_decorations = "INTEGRATED_BUTTONS | RESIZE | MACOS_FORCE_ENABLE_SHADOW"
+        -- overrides.use_fancy_tab_bar = true
+        -- overrides.tab_bar_at_bottom = false
+        -- overrides.hide_tab_bar_if_only_one_tab = false
+        -- overrides.window_padding = nil
+        -- overrides.enable_scroll_bar = true
+        overrides.window_decorations = nil
+        overrides.use_fancy_tab_bar = nil
+        overrides.tab_bar_at_bottom = nil
+        overrides.hide_tab_bar_if_only_one_tab = nil
         overrides.window_padding = nil
-        overrides.enable_scroll_bar = true
+        overrides.enable_scroll_bar = nil
+        overrides.window_background_opacity = nil
         -- overrides.show_tabs_in_tab_bar = true
     end
 
