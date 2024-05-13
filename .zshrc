@@ -103,6 +103,8 @@ export ZSH_TMUX_UNICODE=true
 # Use a python you have installed in a special location
 export CLOUDSDK_PYTHON=/usr/local/Cellar/python@3.9/3.9.19/libexec/bin/python3
 
+# dotenv
+ZSH_DOTENV_PROMPT=false
 
 plugins=(
   evalcache
