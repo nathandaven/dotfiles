@@ -183,6 +183,9 @@ alias pipes="pipes.sh"
 alias bonsai="cbonsai"
 alias matrix="cmatrix"
 
+# todo
+alias nvim="NVIM_ZEN_MODE=1 nvim"
+
 # Created by `pipx` on 2023-12-29 03:25:06
 export PATH="$PATH:/Users/nathandaven/.local/bin"
 

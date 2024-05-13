@@ -1,6 +1,23 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 
+-- for neovim via https://github.com/wez/wezterm/issues/2877, not working yet
+wezterm.on('user-var-changed', function(window, pane, name, value)
+    if name == "NVIM_ZEN_MODE" then
+        local overrides = window:get_config_overrides() or {}
+        if value == "1" and not overrides.window_padding then
+            overrides.window_padding = {
+                left = 0,
+                right = 0,
+                top = 0,
+                bottom = 0,
+            }
+        else
+            overrides.window_padding = nil
+        end
+        window:set_config_overrides(overrides)
+    end
+end)
 
 wezterm.on('update-status', function(window, pane)
     local overrides = window:get_config_overrides() or {}
@@ -8,7 +25,13 @@ wezterm.on('update-status', function(window, pane)
         overrides.use_fancy_tab_bar = false
         overrides.window_decorations = "NONE"
         overrides.hide_tab_bar_if_only_one_tab = true
-        -- overrides.enable_scroll_bar = false
+        overrides.window_padding = {
+            left = 0,
+            right = 0,
+            top = 0,
+            bottom = 0,
+        }
+        overrides.enable_scroll_bar = false
         -- overrides.tab_bar_at_bottom = true
         -- overrides.show_tabs_in_tab_bar = false
     else
@@ -16,7 +39,8 @@ wezterm.on('update-status', function(window, pane)
         overrides.use_fancy_tab_bar = true
         overrides.tab_bar_at_bottom = false
         overrides.hide_tab_bar_if_only_one_tab = false
-        -- overrides.enable_scroll_bar = true
+        overrides.window_padding = nil
+        overrides.enable_scroll_bar = true
         -- overrides.show_tabs_in_tab_bar = true
     end
 
@@ -118,12 +142,6 @@ config.tab_max_width = 9999
 config.native_macos_fullscreen_mode = true
 config.hide_mouse_cursor_when_typing = false
 config.show_tabs_in_tab_bar = true
-config.window_padding = {
-    -- left = 10,
-    -- right = 10,
-    -- top = 30,
-    -- bottom = 0,
-}
 config.enable_scroll_bar = true
 -- config.front_end = "OpenGL"
 config.window_frame = {
