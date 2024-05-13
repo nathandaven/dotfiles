@@ -20,11 +20,11 @@ wezterm.on('update-status', function(window, pane)
         -- overrides.show_tabs_in_tab_bar = true
     end
 
-    if pane:is_alt_screen_active() then
-        overrides.colors.scrollbar_thumb = "transparent"
-    else
-        overrides.colors.scrollbar_thumb = nil
-    end
+    -- if pane:is_alt_screen_active() then
+    --     overrides.colors.scrollbar_thumb = "transparent"
+    -- else
+    --     overrides.colors.scrollbar_thumb = nil
+    -- end
     window:set_config_overrides(overrides)
 end)
 
