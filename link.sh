@@ -6,6 +6,7 @@ shopt -s dotglob
 # directory variables
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 BACKUP_DIR="$HOME/.dotfiles.$(date +"%d-%m-%Y_%H.%M.%S")"
+LINK_DIR="$HOME"
 
 # colors
 RED="\e[31m"
@@ -16,20 +17,35 @@ ENDCOLOR="\e[0m"
 
 # linking function
 symlink() {
-    echo -e "$(printf "${GREEN} > Linking $1 to $HOME/$(basename $1)${ENDCOLOR}")"
+    echo -e "$(printf "${GREEN} > Linking $1 to $LINK_DIR/$(basename $1)${ENDCOLOR}")"
     if [ "$DRY" == "false" ]; then
-        ln -s -f "$1" "$HOME/$(basename $1)"
+        ln -s -f "$1" "$LINK_DIR/$(basename $1)"
     fi
 }
 
 # backup function, renames existing files to .old if not already a link
 backup() {
-    if [[ (-f "$HOME/$(basename $1)" || -d "$HOME/$(basename $1)") && ! -L "$HOME/$(basename $1)" ]]; then
-        echo -e "$(printf "${RED} * $HOME/$(basename $1) found, backing up to $BACKUP_DIR ${ENDCOLOR}")"
+    if [[ (-f "$LINK_DIR/$(basename $1)" || -d "$LINK_DIR/$(basename $1)") && ! -L "$LINK_DIR/$(basename $1)" ]]; then
+        echo -e "$(printf "${RED} * $LINK_DIR/$(basename $1) found, backing up to $BACKUP_DIR ${ENDCOLOR}")"
         if [ "$DRY" == "false" ]; then
-            mv "$HOME/$(basename $1)" "$BACKUP_DIR/$(basename $1)"
+            mv "$LINK_DIR/$(basename $1)" "$BACKUP_DIR/$(basename $1)"
         fi
     fi
+}
+
+parse() {
+    for FILE in $1; do
+        if [[ "$(basename $FILE)" != ".DS_Store" &&
+        "$(basename $FILE)" != *.md &&
+        "$(basename $FILE)" != *.sh &&
+        "$(basename $FILE)" != *.vscode &&
+        "$(basename $FILE)" != *.git &&
+        "$(basename $FILE)" != configuration &&
+        "$(basename $FILE)" != .config ]]; then
+            backup "$FILE"
+            symlink "$FILE"
+        fi
+    done
 }
 
 # main
@@ -57,12 +73,15 @@ main() {
     done
 
     echo ""
-    for FILE in $SCRIPT_DIR/*; do
-        if [[ "$(basename $FILE)" != ".DS_Store" && "$(basename $FILE)" != *.md && "$(basename $FILE)" != *.sh && "$(basename $FILE)" != *.vscode && "$(basename $FILE)" != *.git && "$(basename $FILE)" != configuration ]]; then
-            backup "$FILE"
-            symlink "$FILE"
-        fi
-    done
+
+    # ~
+    parse "$SCRIPT_DIR/*"
+
+    # ~/.config
+    SCRIPT_DIR="$SCRIPT_DIR/.config"
+    BACKUP_DIR="$BACKUP_DIR/.config"
+    LINK_DIR="$HOME/.config"
+    parse "$SCRIPT_DIR/*"
 
     echo ""
     echo -e "$(printf "${BOLDGREEN}done! exiting${ENDCOLOR}")"
