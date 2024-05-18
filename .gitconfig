@@ -1,3 +1,21 @@
 [user]
 	name = nathandaven
-	email = nathandaven@gmail.com
+  email = nathandaven@gmail.com
+
+[core]
+  editor = nvim
+  pager = delta
+
+[interactive]
+  difffilter = delta --color-only --features=interactive
+
+[delta]
+  navigate = true
+  features = decorations
+  # side-by-side = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default

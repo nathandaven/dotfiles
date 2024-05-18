@@ -103,6 +103,9 @@ export ZSH_TMUX_UNICODE=true
 # Use a python you have installed in a special location
 export CLOUDSDK_PYTHON=/usr/local/Cellar/python@3.9/3.9.19/libexec/bin/python3
 
+# lazygit
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # dotenv
 ZSH_DOTENV_PROMPT=false
 
@@ -129,6 +132,8 @@ plugins=(
   helm
   docker
   kubectl
+  fzf
+  zoxide
 )
 # compctl -g '~/.itermocil/*(:t:r)' itermocil
 source $ZSH/oh-my-zsh.sh
@@ -200,6 +205,12 @@ export PATH="$PATH:/Users/nathandaven/.local/bin"
 ZSH_HIGHLIGHT_STYLES[comment]="fg=magenta"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#897d66"
 # fg=white,bold,bg=#ff00ff,bold 756b57
+
+# use zoxide as cd
+alias cd="z"
+
+# lazygit
+alias lgit="lazygit"
 
 # import local zshrc
 if [[ -r "$HOME/.zshrc.local" ]]; then
