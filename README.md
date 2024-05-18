@@ -30,7 +30,7 @@ this is not very fancy.. but if this is useful feel free to use.
 
 ## examples
 
-## wezterm
+### wezterm
 <img alt="image" src="https://github.com/nathandaven/dotfiles/assets/25095231/6ea2b238-96af-4341-9f9a-4e81f7b66d5d">
 
 
