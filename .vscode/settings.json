@@ -148,7 +148,7 @@
   "powermode.combo.location": "statusbar",
   "files.simpleDialog.enable": true,
   "[shellscript]": {
-    "editor.defaultFormatter": "shakram02.bash-beautify"
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"

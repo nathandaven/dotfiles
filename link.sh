@@ -61,6 +61,7 @@ main() {
         case $yn in
         y)
             mkdir "$BACKUP_DIR"
+            mkdir "$BACKUP_DIR/.config"
             break
             ;;
         dry)
