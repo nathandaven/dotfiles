@@ -208,6 +208,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#897d66"
 
 # use zoxide as cd
 alias cd="z"
+alias cdi="zi"
 
 # lazygit
 alias lgit="lazygit"
