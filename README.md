@@ -30,7 +30,11 @@ this is not very fancy.. but if this is useful feel free to use.
 
 ## examples
 
-### alacritty
+### wezterm
+<img alt="image" src="https://github.com/nathandaven/dotfiles/assets/25095231/6ea2b238-96af-4341-9f9a-4e81f7b66d5d">
+
+
+### alacritty with tmux
 <img alt="Screenshot 2024-05-08 at 8 53 36 PM" src="https://github.com/nathandaven/dotfiles/assets/25095231/2161da43-8ede-4c25-b884-2a7b88b84746">
 
 ### vscode
