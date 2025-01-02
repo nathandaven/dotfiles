@@ -40,4 +40,15 @@ git clone https://github.com/mroth/evalcache ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 brew install pygments zoxide fzf
 
+# tmux
+echo "----------------------------"
+echo "Set up tmux config"
+echo "----------------------------"
+cd
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
 
+# done
+echo "----------------------------"
+echo "DONE: run link.sh to set up configuration"
+echo "----------------------------"
