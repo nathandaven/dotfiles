@@ -10,7 +10,8 @@ echo "Installing apps via brew"
 echo "----------------------------"
 brew install \
 	orbstack \
-	neofetch
+	neofetch \
+        tmux
 	
 # Brew casks
 echo "----------------------------"
