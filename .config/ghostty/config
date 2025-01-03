@@ -1,0 +1,49 @@
+# The syntax is "key = value". The whitespace around the
+
+# equals doesn't matter.
+
+# background = 282c34
+
+# foreground = ffffff
+
+# Comments start with a `#` and are only valid on their own line.
+
+# Blank lines are ignored!
+
+# keybind = ctrl+z=close_surface
+
+# keybind = ctrl+d=new_split:right
+
+# Empty values reset the configuration to the default value
+
+font-family = "SF Pro Mono"
+
+#theme = dark:zenwritten_dark,light:zenwritten_light
+
+theme = Arthur
+
+# macos-titlebar-style = tabs
+
+# theme = dark:"Builtin Tango Dark",light:"Builtin Tango Light"
+
+# theme = "Builtin Tango Dark"
+
+#quickterm
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+quick-terminal-position = left
+confirm-close-surface = false
+quick-terminal-animation-duration = 0.1
+
+keybind = cmd+right=new_split:right
+keybind = cmd+down=new_split:down
+keybind = cmd+left=new_split:left
+keybind = cmd+up=new_split:up
+
+window-height = 24
+window-width = 91
+
+window-padding-x=10
+window-padding-y=10
+
+background-blur-radius=50
+background-opacity=0.9

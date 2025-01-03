@@ -43,6 +43,7 @@ parse() {
         "$(basename $FILE)" != configuration &&
         "$(basename $FILE)" != .config &&
         "$(basename $FILE)" != .env &&
+        "$(basename $FILE)" != icons &&
         "$(basename $FILE)" != .gitconfig &&
         "$(basename $FILE)" != .gitignore ]]; then
             backup "$FILE"
